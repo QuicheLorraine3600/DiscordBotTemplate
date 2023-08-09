@@ -5,7 +5,7 @@ export type Interaction = ChatInputCommandInteraction<CacheType>
 
 export class Command {
 
-	get data(): SlashCommandBuilder {
+	get data(): Pick<SlashCommandBuilder, "toJSON"> {
 		return new SlashCommandBuilder()
 	}
 
