@@ -1,0 +1,25 @@
+import Bot from "./Bot"
+import logger from "./modules/Logger"
+
+import { token } from "../Env"
+
+import { Database } from "sqlite3"
+export const db =  new Database("db.sqlite")
+db.close()
+
+const bot = new Bot() 
+bot.login(token)
+
+logger.info("Here we go")
+
+process.on('SIGINT', () => {
+	logger.info("Caught interrupt signal");
+
+	db.close()
+	bot.disconnect()
+
+	logger.info("Bye bye !");
+	setTimeout(() => {
+		process.exit(0)
+	}, 200)
+});

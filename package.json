@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "immutable": "^4.3.1",
+    "sqlite3": "^5.1.6",
+    "winston": "^3.10.0"
+  },
+  "name": "lauryne",
+  "version": "2.0.0",
+  "main": "./dist/App.js",
+  "scripts": {
+    "start": "ts-node ./src/app/App.ts",
+    "deploy": "ts-node ./src/deploy.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
