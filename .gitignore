@@ -3,3 +3,4 @@ logs/
 node_modules/
 db.sqlite
 *.bat
+ecosystem.config.js
