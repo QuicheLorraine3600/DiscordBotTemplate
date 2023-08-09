@@ -1,26 +1,23 @@
-import { Client, Events } from "discord.js";
+import { Client } from "discord.js";
 
 import intents from "./utils/DiscordIntents"
-import CommandHandler from "./CommandHandler"
-import logger from "./modules/Logger";
 
-// import logger from "./utils/Logger"
+import CommandHandler from "./CommandHandler"
+import EventHandler from "./EventHandler"
 
 export default class Bot {
 
 	public readonly client: Client
     public readonly commandHandler: CommandHandler
+    public readonly eventHandler: EventHandler
 
 	constructor() {
 
 		const client = new Client({ intents: intents });
 		this.client = client
 		
-		client.once(Events.ClientReady, c => {
-			logger.info(`Ready! Logged in as ${c.user.tag}`);
-		});
-		
 		this.commandHandler = new CommandHandler(this)
+		this.eventHandler = new EventHandler(this)
 	}
 
 	public login(token: string) {
