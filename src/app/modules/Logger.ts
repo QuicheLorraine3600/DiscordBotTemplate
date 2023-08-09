@@ -1,5 +1,5 @@
 import { createLogger, format, transports } from "winston"
-import { appName } from "../../Env";
+import { APP_NAME } from "../../Env";
 
 const { combine, timestamp, label, printf } = format;
 
@@ -26,7 +26,7 @@ export const logger = createLogger({
 	// 	// format.json()
 	// ),
 	format: defaultFormat,
-	defaultMeta: { service: appName },
+	defaultMeta: { service: APP_NAME },
 	transports: [
 		//
 		// - Write to all logs with level `info` and below to `quick-start-combined.log`.
