@@ -5,7 +5,6 @@ import Ping from "./src/Ping";
 import Help from "./src/Help";
 
 export default List<Command>([
-	new Ping()
+	new Ping(),
+	new Help()
 ])
-
-export { Ping, Help }
