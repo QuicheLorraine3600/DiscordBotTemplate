@@ -3,4 +3,5 @@ logs/
 node_modules/
 db.sqlite
 *.bat
+*.bash
 ecosystem.config.js

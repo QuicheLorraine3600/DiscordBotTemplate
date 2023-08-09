@@ -1,5 +1,5 @@
 import { createLogger, format, transports } from "winston"
-import { name as appName } from "../../../package.json"
+import { appName } from "../../Env";
 
 const { combine, timestamp, label, printf } = format;
 

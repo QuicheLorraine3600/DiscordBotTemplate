@@ -10,7 +10,8 @@
   "main": "./dist/App.js",
   "scripts": {
     "start": "ts-node ./src/app/App.ts",
-    "deploy": "ts-node ./src/deploy.ts"
+    "deploy": "ts-node ./src/deploy.ts",
+    "global-deploy": "ts-node ./src/global-deploy.ts"
   },
   "author": "",
   "license": "ISC",
