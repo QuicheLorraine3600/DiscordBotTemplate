@@ -1,7 +1,7 @@
 import Bot from "./Bot"
 import logger from "./modules/Logger"
 
-import { token } from "../Env"
+import { TOKEN } from "../Env"
 
 import { Database } from "sqlite3"
 export const db =  new Database("db.sqlite")
