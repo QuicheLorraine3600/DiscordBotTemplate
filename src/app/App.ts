@@ -8,7 +8,7 @@ export const db =  new Database("db.sqlite")
 db.close()
 
 const bot = new Bot() 
-bot.login(token)
+bot.login(TOKEN)
 
 logger.info("Here we go")
 
