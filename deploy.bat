@@ -1,0 +1,7 @@
+@ECHO OFF
+
+set TOKEN=???
+set CLIENT_ID=???
+set GUILD_ID=???
+
+npm run deploy
