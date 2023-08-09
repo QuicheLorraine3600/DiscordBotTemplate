@@ -6,13 +6,14 @@ export enum EmbedColor {
 }
 
 export default class DefaultEmbed extends EmbedBuilder {
-	constructor(title: string) {
+	constructor() {
 		super({
-			title: title,
-			
-
-			color: 0x0099ff,
-
+			color: EmbedColor.BLUE,
+            timestamp: new Date(),
+            footer: {
+                text: "Fièrement propulsé par Monkey Studios",
+                icon_url: "https://cdn.discordapp.com/avatars/321639963848343563/dda3b965538cd51f7e3c218c64817833.png?size=4096"
+            }
 		})	
 	}
 }
